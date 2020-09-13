@@ -167,7 +167,8 @@ export default class BotWidget extends React.Component {
   submitCallback() {
     var referenceId = uuidv4()
     var formData = this.getCleanFormData(referenceId)
-    fetch('https://www.formbackend.com/f/8a85bbb7b6c7a66f', {
+    var ENDPOINT_URL = 'https://www.formbackend.com/f/8a85bbb7b6c7a66f'
+    fetch(ENDPOINT_URL, {
       method: 'POST',
       body: formData,
     }).then(res => {
